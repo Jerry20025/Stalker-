@@ -1,4 +1,4 @@
-# GitHub Profile Fetcher
+# GitHub Profile Stalker
 
 ## Introduction
 
