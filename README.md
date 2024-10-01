@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The GitHub Profile Fetcher is an interactive web application designed to display GitHub user profiles and repositories in a user-friendly interface. Utilizing the GitHub API, this tool provides a comprehensive view of a user's GitHub presence, including detailed statistics, repository listings, and more.
+The GitHub Profile stalker is an interactive web application designed to display GitHub user profiles and repositories in a user-friendly interface. Utilizing the GitHub API, this tool provides a comprehensive view of a user's GitHub presence, including detailed statistics, repository listings, and more.
 
 ## Live Server
 ### Experience the Application in Action
