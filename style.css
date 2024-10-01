@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background-color:#FAF7F0;
+    color: #e6e6e6;
+    height: 100%;
+    margin: 0;
+    min-height: 100vh; 
+    overflow-y: auto;
+    padding-top: 40px;
+}
+
+.container {
+    padding: 40px 24px;
+    max-width: 48rem;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.007);
+}
+
+.searchBox {
+    background-color:#D8D2C2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 12px;
+    top: 0;
+    z-index: 100;
+    color: black;
+}
+
+input {
+    background-color:transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 16px;
+    color: black;
+}
+
+button {
+    background-color: #B17457;
+    color:black;
+    padding: 12px 18px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #FAF7F0;
+    color: black;
+    border-bottom: 4px solid #B17457;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #555555;
+    margin: 30px 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FAF7F0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.profile-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content > div {
+    margin-top: 30px;
+    background-color: #FAF7F0;
+    padding: 30px;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tablinks.active {
+    background-color: #FAF7F0;
+    color: black;
+    border-bottom: 4px solid #B17457;
+}
+
+.stats {
+    display: flex;
+}
+
+.stats-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: larger;
+    text-align: center;
+    width: fit-content;
+    block-size: fit-content;
+}
+
+.profile-details {
+    margin-top: 30px;
+}
+
+.stats-name {
+    padding-left: 20px;
+}
+
+.infos {
+    padding: 5px;
+    display: flex;
+}
+
+.infos .stats-name {
+    padding-top: 10px;
+}
+
+.infos .stats-value {
+    padding-left: 10px;
+}
+
+.stats .stats-value {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#bottomButton {
+    display: flex;
+    width: 200px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#bottomButton:hover{
+    color: #FAF7F0;
+    border-bottom: 4px solid #B17457;
+}
+.improve-link {
+    width: 200px;
+    height: 50px;
+    display: flex;
+}
+
+#bottomButton > p {
+    font-size: 14px;
+    margin-top: 4px;
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.mobile-dropdown {
+    display: none; /* initially hidden */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background-color: #FAF7F0;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+        min-width: 100px;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .searchBox {
+        padding: 10px;
+    }
+
+    .searchBox input {
+        margin-bottom: 10px;
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .mobile-dropdown {
+        display: block; /* show dropdown */
+    }
+
+    .tablinks {
+        margin-bottom: 10px;
+    }
+
+    .profile-image {
+        min-width: 100px;
+        height: 120px;
+        width: 120px;
+        
+    }
+
+    .stats-container {
+        padding: 10px 5px;
+    }
+
+    .stats {
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+}
+
+#error {
+    text-align: center;
+}

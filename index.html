@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://projects.mustafaemresahin.com/github-api/images/github-logo.png">
+    <title>GitHub Stalker</title>
+</head>
+<body>
+<div style="min-height: calc(100% - 50px);">
+    <div class="container" id="container">
+        <div style="text-align: center;" onclick="refresh()">
+            <div style="display: inline-block; vertical-align: middle;">
+              <img src="https://projects.mustafaemresahin.com/github-api/images/github-logo.png" style="width:55px; height:55px;">
+            </div>
+            <h1 style="cursor: pointer; display: inline-block; vertical-align: middle; margin: 0;">GitHub Stalker</h1>
+        </div>          
+        <hr style="color:white;">
+        <div class="searchBox">
+            <input type="text" id="searchInput" placeholder="Enter Github Username">
+            <button onclick="searchGithub(false)">Search</button>
+            <button onclick="searchGithub(true)">Random</button>
+        </div>
+        <br>
+        <div>
+            <h3 id="error"></h3>
+        </div>  
+        <div id="mini" style="display:none;">
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Details')" id="defaultOpen">Details</button>
+                <button class="tablinks" onclick="openTab(event, 'Repos')">Repositories</button>
+                <button class="tablinks" onclick="openTab(event, 'Followers')">Followers</button>
+                <button class="tablinks" onclick="openTab(event, 'Following')">Following</button>
+                <button class="tablinks" onclick="openTab(event, 'Starred')">Starred</button>
+                <button class="tablinks" onclick="openTab(event, 'Stats')">Stats</button>
+            </div>
+            <!-- Dropdown menu for mobile view -->
+            <select id="mobileTabMenu" class="mobile-dropdown" onchange="openTabFromDropdown()">
+                <option value="Details">Details</option>
+                <option value="Repos">Repositories</option>
+                <option value="Followers">Followers</option>
+                <option value="Following">Following</option>
+                <option value="Starred">Starred</option>
+                <option value="Stats">Stats</option>
+            </select>
+            <div id="Details" class="tab-content">
+                <div class="profile">
+                    <div style="display: flex;">
+                        <div class="profile-image" style="display: inline-block;">
+                            <img src="#" alt="User Image" />
+                        </div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <div class="stats-value"></div>
+                                <div class="stats-name">Public Repos</div>
+                            </div>
+                            <div class="stats-container">
+                                <div class="stats-value"></div>
+                                <div class="stats-name">Followers</div>
+                            </div>
+                            <div class="stats-container">
+                                <div class="stats-value"></div>
+                                <div class="stats-name">Following</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="profile-details">
+                        <h2 class="name"></h2>
+                        <p class="username"></p>
+                        <br>
+                        <p class="bio"></p>
+                        <br>
+                        <p class="location"></p>
+                        <br>
+                        <a href="#" target="_blank">Go to github profile</a>
+                        <hr>
+                        <div class="info">
+                            <div class="infos">
+                                <div class="stats-name"><strong>Account Created At:</strong></div>
+                                <div class="stats-value" style="padding-top: 10px;"></div>
+                            </div>
+                            <div class="infos">
+                                <div class="stats-name"><strong>Email:</strong></div>
+                                <div class="stats-value"  style="padding-top: 10px;"></div>
+                            </div>
+                            <br>
+                            <div class="infos">
+                                <div class="stats-name"><strong>Blog:</strong></div>
+                                <div class="stats-value" style="padding-top: 10px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Repos" class="tab-content"><p style="text-align: center;">Loading...</p></div>
+            <div id="Followers" class="tab-content"><p style="text-align: center;">Loading...</p></div>
+            <div id="Following" class="tab-content"><p style="text-align: center;">Loading...</p></div>
+            <div id="Starred" class="tab-content"><p style="text-align: center;">Loading...</p></div>
+            <div id="Stats" class="tab-content">
+            <div style="text-align: center;">
+                <h2>Most Used Languages</h2>
+                <br>
+                <div class="most-used-languages" style="display: inline-block;">
+                    <img src="#" alt="Most Used Languages" style="max-width: 100%; height: auto; display: block;"/>
+                </div>
+                <br>
+                <hr>
+                <h2>Streaks</h2>
+                <br>
+                <div class="streak" style="display: inline-block;">
+                    <img src="#" alt="Streak" style="max-width: 100%; height: auto; display: block;"/>
+                </div>
+                <br>
+                <hr>
+                <h2>Stats</h2>
+                <br>
+                <div class="stat" style="display: inline-block;">
+                    <img src="#" alt="Stat" style="max-width: 100%; height: auto; display: block;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="button-container">
+    <a href="https://github.com/Jerry20025" target="_blank" class="improve-link">
+        <button id="bottomButton">
+            <div class="icon">
+                <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <p style="color: black;">Improve on GitHub</p>
+        </button>
+    </a>
+</div>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
